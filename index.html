@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XE Currency Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero-section">
+                <h1>Currency Converter</h1>
+                <p>Check live foreign currency exchange rates</p>
+            </div>
+
+            <div class="converter-card">
+                <div class="converter-form">
+                    <div class="form-row">
+                        <div class="input-group amount-group">
+                            <label>Amount</label>
+                            <input type="number" id="amount" value="1" step="0.01" class="amount-input">
+                        </div>
+                        
+                        <div class="input-group currency-group">
+                            <label>From</label>
+                            <div class="currency-select">
+                                <select id="fromCurrency">
+                                    <option value="USD">USD</option>
+                                </select>
+                                <div class="currency-flag" id="fromFlag">🇺🇸</div>
+                            </div>
+                        </div>
+
+                        <div class="swap-container">
+                            <button id="swapBtn" class="swap-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group currency-group">
+                            <label>To</label>
+                            <div class="currency-select">
+                                <select id="toCurrency">
+                                    <option value="EUR">EUR</option>
+                                </select>
+                                <div class="currency-flag" id="toFlag">🇪🇺</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <div class="result-display">
+                            <span class="result-amount" id="resultAmount">0.85</span>
+                            <span class="result-currency" id="resultCurrency">EUR</span>
+                        </div>
+                        <div class="rate-info">
+                            <span id="rateText">1 USD = 0.85856 EUR</span>
+                            <span class="rate-disclaimer">Mid-market exchange rate at <span id="updateTime">12:34 UTC</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="conversion-tables">
+                <div class="table-section">
+                    <h3>Convert US Dollar to Euro</h3>
+                    <div class="conversion-table">
+                        <div class="table-header">
+                            <div class="header-cell">🇺🇸 US Dollar</div>
+                            <div class="header-cell">🇪🇺 Euro</div>
+                        </div>
+                        <div class="table-body" id="usdToEurTable"></div>
+                    </div>
+                </div>
+
+                <div class="table-section">
+                    <h3>Convert Euro to US Dollar</h3>
+                    <div class="conversion-table">
+                        <div class="table-header">
+                            <div class="header-cell">🇪🇺 Euro</div>
+                            <div class="header-cell">🇺🇸 US Dollar</div>
+                        </div>
+                        <div class="table-body" id="eurToUsdTable"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
